@@ -97,7 +97,7 @@ export class PaymentComponent {
           this._router.navigate(['home']);
         }
         if (!res){
-          this._snackbarService.showErrorMessage('Tarjeta con saldo insuficiente.')
+          this._snackbarService.showWarnMessage('Tarjeta con saldo insuficiente.')
           this._router.navigate(['home']);
         }
       })
