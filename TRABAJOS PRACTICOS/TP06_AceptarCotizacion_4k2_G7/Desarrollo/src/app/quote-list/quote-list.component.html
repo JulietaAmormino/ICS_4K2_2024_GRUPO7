@@ -1,0 +1,38 @@
+<div class="quote-selection-container">
+    <h1>Aceptar Cotización</h1>
+    <p>Por favor selecciona una cotización</p>
+    <mat-card class="quote-card" (click)="selectPaymentMethod(transport.id)" *ngFor="let transport of transports">
+      <div class="header">
+          <div class="header-title">
+              <span> {{ transport.name }} </span>
+              <span>
+                <mat-icon *ngFor="let star of transport.ratingArray" [ngClass]="{'filled': star <= transport.rating}">
+                    star
+                </mat-icon>
+              </span>
+          </div>
+      </div>
+    
+    
+      <div class="content">
+        <div>
+          <span class="date-label">Fecha Retiro:</span><span class="date">{{ transport.pickupDate | date: 'dd/MM/YYYY' }}</span>
+        </div>
+        <div>
+          <span class="date-label">Fecha Entrega:</span><span class="date">{{ transport.deliveryDate  | date: 'dd/MM/YYYY' }}</span>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="action-buttons">
+            <img *ngIf="transport.paymentMethods.includes('master-card')" src="../assets/master-card.png" alt="Master card" width="30">
+            <img *ngIf="transport.paymentMethods.includes('american-express')" src="../assets/american-express.png" alt="Amex" width="30">
+            <img *ngIf="transport.paymentMethods.includes('visa')" src="../assets/visa.png" alt="Visa" width="30">
+            <img *ngIf="transport.paymentMethods.includes('cash-on-pickup')" src="../assets/dollar-bill.png" alt="Contado al retirar" width="30">
+            <img *ngIf="transport.paymentMethods.includes('cash-on-delivery')" src="../assets/cash-on-delivery.png" alt="Contado contra entrega" width="30">
+          </div>
+        <span class="price"> {{ transport.price | currency }}</span>
+      </div>
+     
+    </mat-card>
+  </div>
+  

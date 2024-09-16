@@ -1,0 +1,51 @@
+.payment-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .payment-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+.payment-option {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    HEIGHT: 6rem;
+    gap: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+  .green-border {
+    border: 2px solid #34AB34;
+  }
+  
+  .blue-border {
+    border: 2px solid #0077B6;
+  }
+  .card-icons img {
+    width: 4rem;
+    height: 2.7rem;
+    object-fit: contain;
+    margin-right: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.card-icons img:last-child {
+    margin-right: 0;
+}
+
+
+  

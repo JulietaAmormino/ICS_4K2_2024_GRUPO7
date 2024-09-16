@@ -1,0 +1,19 @@
+<mat-form-field appearance="outline" color="accent" class="solucionado-form-field">
+    <mat-label>{{ data.label }}</mat-label>
+    <mat-icon class="input_icon" color="accent" *ngIf="data.prefix && data.prefixType === 'icon'" matPrefix>{{ data.prefix }}</mat-icon>
+    <span class="input_prefix" *ngIf="data.prefixType === 'text'" matTextPrefix>{{ data.prefix }}</span>
+    <ng-container *ngIf="data.type !== 'textarea'; else textareaField">
+        <input *ngIf="control && !data.mask" [formControl]="control" matInput [type]="data.type" [disabled]="isDisabled"/>
+        <input *ngIf="control && data.mask" [mask] = "data.mask" [formControl]="control" matInput [type]="data.type" [disabled]="isDisabled"/>
+        <input *ngIf="!control" [type]="data.type" matInput [disabled]="data.disabled"/>
+      </ng-container>
+    
+      <ng-template #textareaField>
+        <textarea *ngIf="control" matInput [formControl]="control" [disabled]="isDisabled"></textarea>
+        <textarea *ngIf="!control" matInput [disabled]="data.disabled" ></textarea>
+      </ng-template>
+    <mat-error *ngIf="getValidationError()" class="solucionado-error_label">
+        {{ getValidationError() }}
+        <mat-icon *ngIf="control?.hasError('passwordStrength')" matTooltip="Debe contar con 1 mayúscula, 1 número, 1 símbolo especial y 6 caracteres"  matTooltipClass="solucionado-tooltip" matTooltipHideDelay="1000">help</mat-icon>
+    </mat-error>
+</mat-form-field>

@@ -1,0 +1,95 @@
+.payment-container {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    h1 {
+      color: var(--dark-blue);
+      margin-bottom: 1rem;
+    }
+  }
+
+  .payment {
+    display: flex;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+    align-items: flex-start;
+}
+  .credit-card-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .title-input{
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+  }
+  .total{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #5F5F5F;
+  }
+.small{
+  width: 50%;
+}
+.micro{
+  width: 25%;
+}
+.date-cvv-input{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+  mat-form-field {
+    width: 100%;
+  }
+  
+  button {
+    align-self: flex-end;
+  }
+
+  .error_label {
+    font-size: 0.5rem;
+    color:red;
+}
+
+.payment-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.total-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+hr {
+  border: none; /* Remover cualquier borde por defecto */
+  height: 1px; /* Establecer la altura del <hr> */
+  background-color: #ccc; /* Color de la línea */
+  margin: 20px 0; /* Espaciado arriba y abajo del <hr> */
+}
+
+
+.pay-button {
+  background-color: #0077B6 !important;
+  color: white !important;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+}
+
+.pay-button:hover {
+  background-color: #0056b3;
+}

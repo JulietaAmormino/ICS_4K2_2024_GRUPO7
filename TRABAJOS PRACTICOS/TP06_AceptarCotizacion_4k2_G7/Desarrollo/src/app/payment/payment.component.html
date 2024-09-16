@@ -1,0 +1,56 @@
+<div class="payment-container">
+    <h1> Cargar datos de la tarjeta </h1>
+
+
+    <mat-card class="payment">
+
+        <form [formGroup]="applicationForm" class="credit-card-form">
+            
+            <div class="date-cvv-input">
+                <mat-form-field appearance="outline" color="accent" class="title-input micro">
+                    <mat-label>Tipo de tarjeta</mat-label>
+                    <select matNativeControl>
+                        <option value="true">Débito</option>
+                        <option value="false">Crédito</option>
+                    </select>
+                </mat-form-field>
+                <isw-input [data]="{ label: 'Numero de documento', value: '', id: 'dni', type: 'number', show: true }" class="title-input small" [control]="dni"/>
+            </div>
+
+            <div>
+                <isw-input [data]="{ label: 'Numero de tarjeta de credito', value: '', mask:'0000 0000 0000 0000', id: 'name_control', type: 'text', show: true }" class="title-input" [control]="creditCardNumber"/>
+            </div>
+            <hr>
+            <div>
+                <isw-input 
+                    [data]="{ label: 'Nombre del dueño', value: 'Nombre del dueño', id: 'creditCardOwnerName', type: 'text', show: true }"
+                    [control]="creditCardOwnerName"
+                    class="title-input">
+                </isw-input>
+            </div>
+            <hr>
+            <div class="date-cvv-input">
+                <isw-input 
+                [data]="{ label: 'Fecha de expiración', value: 'MM/AAAA', mask:'00/00', id: 'creditCardExpiryDate', type: 'text', show: true }"
+                [control]="creditCardExpiryDate"
+                class="title-input small">
+            </isw-input>
+            <isw-input 
+                [data]="{ label: 'CVV', value: 'CVV', id: 'creditCardCVV', type: 'text', show: true }"
+                [control]="creditCardCVV"
+                class="title-input micro">
+            </isw-input>
+            </div>
+
+            <div class="payment-summary">
+                <span class="total-label">TOTAL: {{transport.price | currency}}</span>
+                <button (click)="sendPayment()" mat-raised-button color="primary" class="pay-button">PAGAR</button>
+            </div>
+        </form>
+        
+        
+          
+
+
+    </mat-card>
+</div>

@@ -1,0 +1,14 @@
+.isw_snackbar {
+    font-family: 'Montserrat', sans-serif;
+    &.error > .mdc-snackbar__surface {
+        background-color: #FFB7B8  
+    }
+    
+    &.success > .mdc-snackbar__surface {
+        background-color: #B5F8C3; 
+    }
+
+    &.warn > .mdc-snackbar__surface {
+        background-color: #FAE7C7;   
+    }
+}

@@ -1,0 +1,35 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #CAF0F8;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    align-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
+    h1 {
+        color: #0077B6;
+        font-weight: bold;
+        font-size: 4rem;
+        text-align: center;
+    }
+}
+
+.option {
+    font-size: 2rem;
+    padding: 1rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+    margin-bottom: 3rem;
+    height: 6rem;
+    color: #0077B6;
+    font-weight: bold;
+    width: 50%;
+    border-radius: 1.5rem;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
