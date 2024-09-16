@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISW_TP6_MAIL", "ISW_TP6_MAIL.csproj", "{935DF697-0C02-4B49-A954-4950BC1003AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{935DF697-0C02-4B49-A954-4950BC1003AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{935DF697-0C02-4B49-A954-4950BC1003AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{935DF697-0C02-4B49-A954-4950BC1003AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{935DF697-0C02-4B49-A954-4950BC1003AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6FF1E70-4706-487B-A288-7D51AAAFF2A5}
+	EndGlobalSection
+EndGlobal

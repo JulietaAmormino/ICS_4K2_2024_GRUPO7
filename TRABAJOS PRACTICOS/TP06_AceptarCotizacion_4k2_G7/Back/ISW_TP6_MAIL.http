@@ -1,0 +1,6 @@
+@ISW_TP6_MAIL_HostAddress = http://localhost:5159
+
+GET {{ISW_TP6_MAIL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
