@@ -1,3 +1,5 @@
+## Configuración
+
 En el archivo appsettings.json tienen que cambiar "<Paste the sendGridKey here>" Por la key que voy a pasar por wsp 
 "SendGrid": {
   "ApiKey": "<Paste the sendGridKey here>"
