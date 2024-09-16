@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 export interface IEmailDTO {
+  creditCardNumber: string;
   email: string;
   dadorCarga: string;
   transportista: string;
@@ -37,7 +38,8 @@ export class TransportService {
         pickupDate: pickupDate,
         deliveryDate: validDeliveryDate,
         price: this.generateRandomPrice(),
-        paymentMethods: this.getRandomPaymentMethods()
+        paymentMethods: this.getRandomPaymentMethods(),
+        state: 'Created'
       }
       transport.push(element);
     }
@@ -110,14 +112,22 @@ export class TransportService {
     return `${day}/${month}/${year}`;
   }
 
-  sendEmail(transport: any, paymentMethod: string): Observable<any> {
-    const emailDTO: IEmailDTO = { email: 'fabrizioins@gmail.com',
+  private paymentMethodMap: { [key: string]: string } = {
+    'creditCard': 'Tarjeta',
+    'cash-on-delivery': 'Contado contra entrega',
+    'cash-on-pickup': 'Contado al retirar'
+  };
+
+  sendEmail(transport: any, paymentMethod: string, cardNumber: string = ''): Observable<any> {
+    const emailDTO: IEmailDTO = { 
+      creditCardNumber: cardNumber,
+      email: 'fabrizioins@gmail.com',
       dadorCarga: this.getRandomName(),
       transportista: transport.name,
       calificacion: transport.rating + ' estrellas',
       fechaRetiro: this.formatDate(transport.pickupDate),
       fechaEntrega: this.formatDate(transport.deliveryDate),
-      formaPago: paymentMethod,
+      formaPago: this.paymentMethodMap[paymentMethod],
       importe: transport.price.toLocaleString('es-AR', { minimumFractionDigits: 0 })
     };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });

@@ -1,7 +1,7 @@
 <div class="quote-selection-container">
     <h1>Aceptar Cotización</h1>
     <p>Por favor selecciona una cotización</p>
-    <mat-card class="quote-card" (click)="selectPaymentMethod(transport.id)" *ngFor="let transport of transports">
+    <mat-card [ngClass]="{'confirmed-state': transport.state === 'Confirmed'}" class="quote-card" (click)="selectPaymentMethod(transport.id)" *ngFor="let transport of transports">
       <div class="header">
           <div class="header-title">
               <span> {{ transport.name }} </span>

@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PaymentMethodsComponent } from './payment-methods/payment-methods.component';
-import { AppComponent } from './app.component';
 import { QuoteListComponent } from './quote-list/quote-list.component';
 import { PaymentComponent } from './payment/payment.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     pathMatch: 'full',
     component: HomeComponent,
   },
   {
-    path: 'quotes',
+    path: '',
     pathMatch: 'full',
     component: QuoteListComponent,
   },

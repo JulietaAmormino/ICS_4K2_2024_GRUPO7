@@ -31,7 +31,7 @@ export class SnackbarService {
   private showMessage(message: string, type: SnackBarType, customConfig?: SnackbarConfig, icon?: string) {
     this.resetPanelClass();
     this.defaultConfig.panelClass?.push(type);
-    this._snackBar.open(`${message}`, 'Close', {...this.defaultConfig});
+    this._snackBar.open(`${message}`, undefined, {...this.defaultConfig});
   }
 
   private resetPanelClass() {

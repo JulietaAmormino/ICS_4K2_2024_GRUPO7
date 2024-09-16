@@ -44,10 +44,9 @@ export class ISWInputComponent implements OnInit {
   }
 
   private getPatternErrorMessage(pattern: string | undefined): string {
-    console.log(pattern)
     if (!pattern) return 'NADA'
     if (pattern === "/^(0[1-9]|1[0-2])\\d{2}$/")
-      return 'La fecha de expiración debe tener el formato MM/AAAA.'
+      return 'La fecha de expiración es incorrecta.'
     else if (pattern === "/^\\d{16}$/")
       return 'La tarjeta de crédito debe tener 16 caracteres.'
     else if (pattern === '/^\\d{3,4}$/')

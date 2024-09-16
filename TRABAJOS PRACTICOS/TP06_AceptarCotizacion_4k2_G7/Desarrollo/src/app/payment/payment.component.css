@@ -8,6 +8,17 @@
     }
   }
 
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }
+
   .payment {
     display: flex;
     margin: 2rem auto;
@@ -92,4 +103,16 @@ hr {
 
 .pay-button:hover {
   background-color: #0056b3;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+  flex-direction: column;
+}
+
+.example-margin {
+  margin: 0 10px;
 }

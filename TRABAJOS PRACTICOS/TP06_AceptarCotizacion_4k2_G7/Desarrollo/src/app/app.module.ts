@@ -15,7 +15,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -25,6 +24,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { SnackbarComponent } from './snackbar/snackbar.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,8 @@ import { HomeComponent } from './home/home.component';
     QuoteListComponent,
     ISWInputComponent,
     PaymentComponent,
-    HomeComponent
+    HomeComponent,
+    SnackbarComponent
   ],
   imports: [
     MatCardModule,
@@ -42,17 +47,17 @@ import { HomeComponent } from './home/home.component';
     NgxMaskDirective,
     MatIconModule,
     MatToolbarModule,
-    CommonModule,
     NgxMaskPipe,
-    MatButtonModule,
     FormsModule,
+    MatRadioModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatIconModule,
     MatTooltipModule,
     MatSnackBarModule,
+    MatAutocompleteModule,
     MatSidenavModule,
     MatDatepickerModule,
+    MatFormFieldModule,
     MatSelectModule,
     MatCheckboxModule,
     RouterModule,
@@ -62,8 +67,7 @@ import { HomeComponent } from './home/home.component';
   ],
   providers: [
     provideNgxMask(),
-    provideHttpClient(withFetch()),
-    MatSelectModule
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

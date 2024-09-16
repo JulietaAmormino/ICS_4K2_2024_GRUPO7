@@ -10,6 +10,6 @@ export class HomeComponent {
   constructor(private _router: Router){ }
 
   getQuotes(){
-    this._router.navigate(['quotes']);
+    this._router.navigate(['']);
   }
 }

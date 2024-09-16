@@ -29,6 +29,10 @@
     align-items: flex-start;
 }
 
+.confirmed-state {
+  background-color: #CAF0F8;
+}
+
 .header{
     width: 100%;
     margin: 0 auto;
