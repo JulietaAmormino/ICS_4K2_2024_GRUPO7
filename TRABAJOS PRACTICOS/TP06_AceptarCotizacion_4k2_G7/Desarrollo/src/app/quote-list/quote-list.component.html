@@ -1,6 +1,9 @@
 <div class="quote-selection-container">
+  <div>
+    <img class="logo-app" src="../assets/logo.png" alt="Tango APP" width="30">
     <h1>Aceptar Cotización</h1>
     <p>Por favor selecciona una cotización</p>
+  </div>
     <mat-card [ngClass]="{'confirmed-state': transport.state === 'Confirmed'}" class="quote-card" (click)="selectPaymentMethod(transport.id)" *ngFor="let transport of transports">
       <div class="header">
           <div class="header-title">

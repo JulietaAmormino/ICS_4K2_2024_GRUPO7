@@ -94,7 +94,7 @@ export class PaymentComponent {
     this._transportService.sendEmail(this.transport, this.paymentMethod, cardNumber).subscribe((res) => {
         if (res){
           this.confirmTransportState();
-          this._snackbarService.showSuccessMessage('Cotización confirmada.');
+          this._snackbarService.showSuccessMessage('Cotización confirmada ' + 'Pedido ' + res.orderCode);
           this._router.navigate(['home']);
         }
         if (!res){
