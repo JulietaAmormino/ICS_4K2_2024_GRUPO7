@@ -24,8 +24,8 @@ export class QuoteListComponent {
 
   selectPaymentMethod(id: number) {
     const transport = this._transportService.getTransportById(id);
-    if (transport?.state === 'Confirmed'){
-      this._snackbarService.showErrorMessage('No se puede confirmar mas de 1 vez la misma cotización.');
+    if (this.transports.some(t => t.state === 'Confirmed')) {
+      this._snackbarService.showErrorMessage('No se puede confirmar más de 1 cotización.');
       return;
     }
     this._router.navigate(['payment-methods'], { queryParams: { quoteId: id } })

@@ -18,9 +18,9 @@ namespace ISW_TP6_MAIL.Controllers
         {
             if (emailDTO.CreditCardNumber.Replace(" ", "") == "4111111111111111") return Ok(false);
 
-            await _emailService.SendEmailAsync(emailDTO);
+            string orderCode = await _emailService.SendEmailAsync(emailDTO);
 
-            return Ok(true);
+            return Ok(new { OrderCode = orderCode });
         }
     }
 }

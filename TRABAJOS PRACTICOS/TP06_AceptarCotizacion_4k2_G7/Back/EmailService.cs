@@ -16,23 +16,27 @@ namespace ISW_TP6_MAIL
             this._logger = logger;
             this._configuration = configuration;
         }
-        public async Task SendEmailAsync(EmailDTO emailDTO)
+        
+        public async Task<string> SendEmailAsync(EmailDTO emailDTO)
         {
             string sendGridApiKey = _configuration["SendGrid:ApiKey"];
             string emailAddress = "solucionado.mailing.service@gmail.com";
             string appName = "ISW - Grupo7 - 4K2";
             var client = new SendGridClient(sendGridApiKey);
-            SendGridMessage msg = await BuildMessage(emailDTO, $"Cotización confirmada - Pedido {GenerateOrderNumber()}", emailAddress, appName);
+            string orderNumber = GenerateOrderNumber();
+            SendGridMessage msg = await BuildMessage(emailDTO, $"Cotización confirmada - Pedido {orderNumber}", emailAddress, appName);
 
             var response = await client.SendEmailAsync(msg);
             if (response.IsSuccessStatusCode)
             {
                 _logger.LogInformation("Email queued successfully");
+                return orderNumber;
             }
             else
             {
                 _logger.LogError("Failed to send email");
             }
+            return "";
         }
 
         public static string GenerateOrderNumber()
