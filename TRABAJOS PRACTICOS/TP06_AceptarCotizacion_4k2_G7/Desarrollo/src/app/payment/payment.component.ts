@@ -37,10 +37,11 @@ export class PaymentComponent {
     if (this.paymentMethod === 'cash-on-pickup' || this.paymentMethod === 'cash-on-delivery'){
       this.isLoading = true;
       this._transportService.sendEmail(this.transport, this.paymentMethod).subscribe((res) => {
-        if (res){
+        if (res) {
+          console.log(res);
           this.confirmTransportState();
-          this._snackbarService.showSuccessMessage('Cotización confirmada.');
-          this._router.navigate(['']);
+          this._snackbarService.showSuccessMessage('Cotización confirmada ' + 'Pedido ' + res.orderCode);
+          this._router.navigate(['home']);
           this.isLoading = false;
         }
       })
@@ -93,7 +94,7 @@ export class PaymentComponent {
     this._transportService.sendEmail(this.transport, this.paymentMethod, cardNumber).subscribe((res) => {
         if (res){
           this.confirmTransportState();
-          this._snackbarService.showSuccessMessage('Cotización confirmada.');
+          this._snackbarService.showSuccessMessage('Cotización confirmada ' + 'Pedido ' + res.orderCode);
           this._router.navigate(['home']);
         }
         if (!res){

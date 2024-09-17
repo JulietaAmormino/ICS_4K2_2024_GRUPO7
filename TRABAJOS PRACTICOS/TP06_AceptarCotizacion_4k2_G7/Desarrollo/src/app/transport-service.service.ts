@@ -18,7 +18,7 @@ export interface IEmailDTO {
   providedIn: 'root'
 })
 export class TransportService {
-  private apiURL = `https://localhost:7110/api/Email`;
+  private apiURL = `http://localhost:5000/api/Email`;
   // Datos en memoria simulando una base de datos
   transports = this.generateTransport();
   constructor(

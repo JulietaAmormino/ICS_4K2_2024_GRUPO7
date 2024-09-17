@@ -17,6 +17,11 @@
     }
 }
 
+.logo-app{
+    width: 50%;
+    border-radius: 2rem;
+  }
+
 .option {
     font-size: 2rem;
     padding: 1rem;

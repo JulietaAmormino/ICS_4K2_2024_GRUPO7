@@ -10,7 +10,7 @@
     </div>
   
     <div (click)="pay('creditCard', transport.id)" *ngIf="hasCreditCard" class="payment-option blue-border">
-      Tarjeta de crédito
+      Tarjeta
       <div class="card-icons">
         <img *ngIf="transport.paymentMethods.includes('master-card')" src="../../assets/master-card.png" alt="Master card" width="30">
         <img *ngIf="transport.paymentMethods.includes('american-express')" src="../../assets/american-express.png" alt="Amex" width="30">
