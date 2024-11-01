@@ -49,7 +49,7 @@
 | Programa de la materia                 | 2024_ICS_ProgramaDeLaMateria.PDF                                    | ICS_4K2_2024_GRUPO7/PLANIFICACION/PROGRAMA                                                       |
 | Planificación de la materia            | PlanificacionDelCuatrimestre_2024_4K2.PDF                           | ICS_4K2_2024_GRUPO7/PLANIFICACIÓN/CRONOGRAMA DE LA MATERIA                                        |
 | Material bibliográfico                 | <<_NombreDelTema_>>_<<_NombreDelLibro_>>.PDF                          | ICS_4K2_2024_GRUPO7/MATERIALES/BIBLIOGRAFÍA                                                      |
-| Templates                              | ICS_TEMPLATE_<<_Nombre_>>.DOC                                        | ICS_4K2_2024_GRUPO7/MATERIALES/TEMPLATES/                                                        |
+| Templates                              | ICS_TEMPLATE_<<_Nombre_>>                                         | ICS_4K2_2024_GRUPO7/MATERIALES/TEMPLATES/                                                        |
 | Resúmenes de la materia                | <<_NombrePropietario_>>_<<_NombreResumen_>>_Unidad<<_N_>>.PDF         | ICS_4K2_2024_GRUPO7/MATERIALES/RESÚMENES/                                                        |
 | Ejercicios desarrollados               | EJ_<<_NombreDelCaso_>>_<<T_emaAsociado_>>.DOC                         | ICS_4K2_2024_GRUPO7/MATERIALES/PARCIAL<<_N_>>/EJERCICIOS                                        |
 | Presentaciones de clases               | <<_NN_>>_<<_NombreDelTemaAsociadoALaPresentación_>>.PDF                | ICS_4K2_2024_GRUPO7/MATERIALES/PRESENTACIONES                                                    |
