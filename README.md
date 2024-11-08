@@ -45,7 +45,7 @@
 | Enunciados de los trabajos prácticos    | Enunciado_TP<<_N_>>_<<_NombreTP_>>.PDF                               | ICS_4K2_2024_GRUPO7/TRABAJOS PRACTICOS/TP<<_N_>>_<<_NombreTP_>>                                |
 | Archivos de entrega de trabajos prácticos | TP<<_N_>>_<<_NombreAbreviadoDelTp_>>_4K2_G7.PDF                      | ICS_4K2_2024_GRUPO7/TRABAJOS PRACTICOS/TP<<_N_>>_<<_NombreAbreviadoDelTp_>>                     |
 | Presentación para la charla TED        | Presentacion_TED_<<_NombreProyecto_>>_G7_4K2.PPT                     | ICS_4K2_2024_GRUPO7/TRABAJOS DE INVESTIGACIÓN/TI<<_N_>>_<<_NombreTI_>>                          |
-| Presentación para Poster científico    | Presentacion_Poster_<<_NombreProyecto_>>_G7_4K2.PPT                  | ICS_4K2_2024_GRUPO7/TRABAJOS DE INVESTIGACION/                                                   |
+| Presentación para Poster científico    | Presentacion_Poster_<<_NombreProyecto_>>_G7_4K2.PNG                  | ICS_4K2_2024_GRUPO7/TRABAJOS DE INVESTIGACION/                                                   |
 | Programa de la materia                 | 2024_ICS_ProgramaDeLaMateria.PDF                                    | ICS_4K2_2024_GRUPO7/PLANIFICACION/PROGRAMA                                                       |
 | Planificación de la materia            | PlanificacionDelCuatrimestre_2024_4K2.PDF                           | ICS_4K2_2024_GRUPO7/PLANIFICACIÓN/CRONOGRAMA DE LA MATERIA                                        |
 | Material bibliográfico                 | <<_NombreDelTema_>>_<<_NombreDelLibro_>>.PDF                          | ICS_4K2_2024_GRUPO7/MATERIALES/BIBLIOGRAFÍA                                                      |
